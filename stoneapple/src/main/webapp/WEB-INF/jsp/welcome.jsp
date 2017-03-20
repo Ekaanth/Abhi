@@ -39,6 +39,9 @@
 					<li><a href="#about">About</a></li>
 				</ul>
 			</div>
+		
+				<a class="navbar-brand" href="/addarticle">Add Article</a>
+		
 		</div>
 	</nav>
 
@@ -52,6 +55,8 @@
 	</div>
 
 	<script type="text/javascript" src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	
 
 </body>
 

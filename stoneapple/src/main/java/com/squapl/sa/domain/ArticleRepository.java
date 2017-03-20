@@ -11,7 +11,9 @@ import org.springframework.data.repository.query.Param;
 @Repository
 public interface ArticleRepository extends JpaRepository <Article, Long> {
 
-	@Query("SELECT t.art_title_en FROM Article t where t.idarticle = :id")
-	Article findbyTitle(@Param("id") Long id);
+	
+
+
+	
 
 }

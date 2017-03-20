@@ -75,20 +75,36 @@ margin-left: 5px;
   width: 630px;
   background-color: #f5f5f0;
   font-size: 15px;
-  font-family: cursive;
+  font-family: monospace;
 }
 .input1:FOCUS {
-	font-size: 35px;
+	font-size: 15px;
 	font-family: monospace;
 }
 </style>
 
 
+<script type="text/javascript">
+function articlesub(){
+	var title = document.article.title.value;
+	var author = document.article.author.value;
+	var article = document.article.article.value;
+	
+	var myObj = {};
+	myObj["article_heading"] = title;
+	myObj["created_by"] = author;
+	myObj["domain"] = article;
+	
+	var json = JSON.stringify(myObj);
+	
+	alert(json);
+}
+</script>
+
 
 </head>
 <body>
-<script src="//cloud.tinymce.com/stable/tinymce.min.js"></script>
-  <script>tinymce.init({ selector:'textarea' });</script>
+
                  <img alt="squapl" src="ArticleSubmit/WebContent/WEB-INF/lib/squapl.jpg" class="image">
 <ul class="drop_menu">
 		<li><a href='#'>Options</a>
@@ -109,21 +125,27 @@ margin-left: 5px;
 				</ul>
 		</li>
 </ul>
-<input type="text" maxlength="180" width="200px" class="input1" placeholder="Title for the blog Max (180 Chars)">
-<textarea ></textarea>  
-Author : <select>
-  <option value="author1">author1</option>
-  <option value="author2">author2</option>
-  <option value="author3">author3</option>
-  <option value="author4">author4</option>
-</select>
-<br><br>
-Article: <select>
- <option value="value1">value1</option>
-  <option value="value2">value2</option>
-  <option value="value3">value3</option>
-  <option value="value4">value4</option>
 
-</select>
+
+<form action="/api/articles" name="article" method="post">
+			<input type="text" maxlength="180" width="200px" name="title" class="input1" placeholder="Title for the blog Max (180 Chars)">
+		<br>
+		<br>
+			Author : <select name="author">
+			  <option value="author1">author1</option>
+			  <option value="author2">author2</option>
+			  <option value="author3">author3</option>
+			  <option value="author4">author4</option>
+			</select>
+		<br><br>
+			Article: <select name="article">
+			 <option value="value1">value1</option>
+			  <option value="value2">value2</option>
+			  <option value="value3">value3</option>
+			  <option value="value4">value4</option>
+			
+			</select>
+		<button onclick="articlesub()">submit</button>
+</form>
 <body>
 </html>

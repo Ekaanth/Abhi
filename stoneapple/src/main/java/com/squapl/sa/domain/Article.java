@@ -11,7 +11,7 @@ import javax.persistence.Id;
 public class Article {
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue 
 	private long   article_id;
 	private String article_heading;
 	private String article_meta_desc;

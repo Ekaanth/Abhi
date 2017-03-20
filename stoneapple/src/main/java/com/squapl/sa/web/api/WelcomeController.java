@@ -24,5 +24,11 @@ public class WelcomeController {
 		model.put("message", this.message);
 		return "addcategory";
 	}
+	
+	@RequestMapping("/addarticle")
+	public String addarticle(Map<String, Object> model) {
+		model.put("message", this.message);
+		return "blogsubmit";
+	}
 
 }

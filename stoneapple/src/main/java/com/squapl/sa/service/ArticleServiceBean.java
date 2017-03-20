@@ -70,20 +70,16 @@ public class ArticleServiceBean implements ArticleService {
 	}
 	
 	
-	public Article findbyTitle(Long id) {
-		
-		Article article = articleRepository.findbyTitle(id);
-		//slowQuery(2000L);
-		System.out.println("findbyTitle is running..." + article.toString()  );
-		return article;
-		
-	}
-	
-	
 	@Override
 	@CacheEvict(value="articles", allEntries=true)
 	public void evictCache() {
 		
+	}
+
+	@Override
+	public Article findbyTitle(Long id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
