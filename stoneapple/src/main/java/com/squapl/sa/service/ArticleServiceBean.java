@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.squapl.sa.domain.Article;
@@ -80,6 +82,11 @@ public class ArticleServiceBean implements ArticleService {
 	public Article findbyTitle(Long id) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public Page<Article> listAllByPage(Pageable pageable) {
+		return articleRepository.findAll(pageable);
 	}
 
 }
