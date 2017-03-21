@@ -80,8 +80,8 @@ public class ArticleServiceBean implements ArticleService {
 
 	@Override
 	public Article findbyTitle(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		Article onearticle = articleRepository.findOne(id);
+		return onearticle;
 	}
 
 	@Override
