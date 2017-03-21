@@ -81,12 +81,16 @@ public class ArticleServiceBean implements ArticleService {
 	@Override
 	public Article findbyTitle(Long id) {
 		Article onearticle = articleRepository.findOne(id);
-		return onearticle;
+		return onearticle;    
+		
+		
 	}
 
 	@Override
 	public Page<Article> listAllByPage(Pageable pageable) {
 		return articleRepository.findAll(pageable);
 	}
+	
+	
 
 }
