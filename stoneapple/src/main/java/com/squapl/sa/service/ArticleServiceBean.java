@@ -1,11 +1,8 @@
 package com.squapl.sa.service;
 
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -36,13 +33,16 @@ public class ArticleServiceBean implements ArticleService {
 		System.out.println("findByDirector is running..." + article.toString()  );
 		return article;
 	}
-	private void slowQuery(long seconds){
+	
+	/*private void slowQuery(long seconds){
 	    try {
                 Thread.sleep(seconds);
             } catch (InterruptedException e) {
                 throw new IllegalStateException(e);
             }
-	}
+	}*/
+	
+	
 	@Override
 
 	@Cacheable(value="articles")

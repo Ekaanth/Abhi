@@ -1,9 +1,9 @@
 package com.squapl.sa.model;
 
-import org.springframework.data.elasticsearch.annotations.Document;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import org.springframework.data.elasticsearch.annotations.Document;
 
 
 @Document(indexName = "users", type = "users", shards = 1)

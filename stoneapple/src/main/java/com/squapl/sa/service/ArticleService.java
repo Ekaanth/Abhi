@@ -1,8 +1,6 @@
 package com.squapl.sa.service;
 
 
-import java.util.Collection;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
