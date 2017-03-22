@@ -4,7 +4,10 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.squapl.sa.domain.Article;
 
 @Controller
 public class WelcomeController {
@@ -30,5 +33,11 @@ public class WelcomeController {
 		model.put("message", this.message);
 		return "blogsubmit";
 	}
-
+		
+	
+	@RequestMapping("/articlesubmit")
+	public String articlesubmit(Model model) {
+		model.addAttribute("article", new Article());
+		  return "article";
+	}
 }

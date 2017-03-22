@@ -85,7 +85,7 @@ public class ArticleServiceBean implements ArticleService {
 		
 		
 	}
-
+ //pagination 
 	@Override
 	public Page<Article> listAllByPage(Pageable pageable) {
 		return articleRepository.findAll(pageable);
