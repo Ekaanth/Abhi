@@ -35,9 +35,10 @@ public class WelcomeController {
 	}
 		
 	
-	@RequestMapping("/articlesubmit")
+	@RequestMapping("/blogsubmit")
 	public String articlesubmit(Model model) {
 		model.addAttribute("article", new Article());
-		  return "article";
+		return "articlesubmit" ;
+		 
 	}
 }
