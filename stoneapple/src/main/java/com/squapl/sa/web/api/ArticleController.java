@@ -208,7 +208,7 @@ public class ArticleController {
 	    
 	    
 	    @RequestMapping(
-	            value = "/api/articlepage",
+	            value = "/api/articlepage", 
 	            method = RequestMethod.GET,
 	            produces = MediaType.APPLICATION_JSON_VALUE)
 	    Page<Article> list( Pageable pageable){
